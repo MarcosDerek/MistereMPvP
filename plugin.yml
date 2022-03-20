@@ -1,0 +1,109 @@
+name: MistereMPvP
+author: MistereM_ aka Marcos Derek
+version: 1.0
+main: me.main.Main
+api-version: 1.8.8
+
+commands:
+    invsee:
+        usage: /command [nick]
+        
+    tpall:
+        usage: /tpall
+        
+    chat:
+        usage: /command [clear, mute, unmute]
+
+    admin:
+        usage: /command
+        description: Hide or show to all player. No to staff members.
+
+    tag:
+        usage: /command [nick] [vip, mvp, pro, mod, modplus, admin, owner]
+    
+    promote:
+        usage: /command [nick] [vip, mvp, pro, mod, modplus, admin, owner]
+        
+    gamemode:
+        usage: /command [0, 1]
+    
+    gm:
+        usage: /command [0, 1]
+    
+    disconnect:
+        usage: /command
+    
+    spawn:
+        usage: /command
+        description: You can go to spawn.
+    
+permissions:
+    mplugin.inv:
+        description: Open the inventory of other player.
+
+    mplugin.chat.manage:
+        description: Manage the chat.
+
+    mplugin.adminmode:
+        description: Hide or show to all player. No to staff members.
+    
+    mplugin.promote.*:
+        description: Promote players.
+        children:
+            mplugin.promote.owner: true
+            mplugin.promote.admin: true
+            
+    mplugin.*:
+        children:
+            mplugin.owner: true
+            mplugin.admin: true
+            mplugin.mod+: true
+            mplugin.mod: true
+            mplugin.youtuber: true
+            mplugin.pro: true
+            mplugin.mvp: true
+            mplugin.vip: true
+            mplugin.normal: true
+
+    mplugin.events.manage:
+        description: Manage events in the server.
+        
+    mplugin.gamemode:
+        description: Change your gamemode.
+        
+    mplugin.construction:
+        description: Build and place blocks.
+
+    mplugin.kits.*:
+        children:
+            mplugin.kits.anchor: true
+            mplugin.kits.aquaman: true
+            mplugin.kits.camel: true
+            mplugin.kits.enderman: true
+            mplugin.kits.fireman: true
+            mplugin.kits.fisherman: true
+            mplugin.kits.flash: true
+            mplugin.kits.gladiator: true
+            mplugin.kits.glider: true
+            mplugin.kits.grandpa: true
+            mplugin.kits.grapper: true
+            mplugin.kits.hermit: true
+            mplugin.kits.hulk: true
+            mplugin.kits.kangaroo: true
+            mplugin.kits.magma: true
+            mplugin.kits.ninja: true
+            mplugin.kits.phantom: true
+            mplugin.kits.poseidon: true
+            mplugin.kits.pyro: true
+            mplugin.kits.reaper: true
+            mplugin.kits.snail: true
+            mplugin.kits.specialist: true
+            mplugin.kits.spectre: true
+            mplugin.kits.stomper: true
+            mplugin.kits.switcher: true
+            mplugin.kits.tank: true
+            mplugin.kits.thor: true
+            mplugin.kits.turtle: true
+            mplugin.kits.urgal: true
+            mplugin.kits.viking: true
+            mplugin.kits.viper: true
