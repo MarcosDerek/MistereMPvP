@@ -1,6 +1,7 @@
 package me.main.PermissionsAndCommands;
 
 import me.main.Main;
+import me.main.API.TabListAPI;
 import me.main.Kits.KitsManager;
 
 import java.util.ArrayList;
@@ -21,7 +22,6 @@ import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.potion.PotionEffectType;
-import org.inventivetalent.tabapi.TabAPI;
 
 public class Commands implements CommandExecutor {
   Main plugin;
@@ -131,7 +131,7 @@ public class Commands implements CommandExecutor {
           p.sendMessage(ChatColor.YELLOW + "/tag [normal, vip, mvp, pro, youtuber, mod, mod+, admin, owner]");
           return true;
         } 
-        TabAPI.setHeaderFooter(p, ChatColor.DARK_RED + ChatColor.BOLD.toString() + "[OWNER] " + ChatColor.RESET + ChatColor.DARK_RED + p.getName() + ChatColor.RESET, ChatColor.DARK_RED + ChatColor.BOLD.toString() + "[OWNER] " + ChatColor.RESET + ChatColor.DARK_RED + p.getName() + ChatColor.RESET);
+        TabListAPI.setHeaderAndFooter(p, ChatColor.DARK_RED + ChatColor.BOLD.toString() + "[OWNER] " + ChatColor.RESET + ChatColor.DARK_RED + p.getName() + ChatColor.RESET, ChatColor.DARK_RED + ChatColor.BOLD.toString() + "[OWNER] " + ChatColor.RESET + ChatColor.DARK_RED + p.getName() + ChatColor.RESET);
         p.sendMessage(ChatColor.GREEN + "Tag changed to " + ChatColor.DARK_RED + "OWNER");
         p.setPlayerListName(ChatColor.DARK_RED + ChatColor.BOLD.toString() + "[OWNER] " + ChatColor.RESET + ChatColor.DARK_RED + p.getName() + ChatColor.RESET);
         p.setDisplayName(ChatColor.DARK_RED + ChatColor.BOLD.toString() + "[OWNER] " + ChatColor.RESET + ChatColor.DARK_RED + p.getName() + ChatColor.RESET);
@@ -142,7 +142,7 @@ public class Commands implements CommandExecutor {
           return true;
         }
         
-        TabAPI.setHeaderFooter(p, ChatColor.RED + ChatColor.BOLD.toString() + "[ADMIN] " + ChatColor.RESET + ChatColor.RED + p.getName() + ChatColor.RESET, ChatColor.RED + ChatColor.BOLD.toString() + "[ADMIN] " + ChatColor.RESET + ChatColor.RED + p.getName() + ChatColor.RESET);
+        TabListAPI.setHeaderAndFooter(p, ChatColor.RED + ChatColor.BOLD.toString() + "[ADMIN] " + ChatColor.RESET + ChatColor.RED + p.getName() + ChatColor.RESET, ChatColor.RED + ChatColor.BOLD.toString() + "[ADMIN] " + ChatColor.RESET + ChatColor.RED + p.getName() + ChatColor.RESET);
         p.sendMessage(ChatColor.GREEN + "Tag changed to " + ChatColor.RED + "ADMIN");
         p.setPlayerListName(ChatColor.RED + ChatColor.BOLD.toString() + "[ADMIN] " + ChatColor.RESET + ChatColor.RED + p.getName() + ChatColor.RESET);
         p.setDisplayName(ChatColor.RED + ChatColor.BOLD.toString() + "[ADMIN] " + ChatColor.RESET + ChatColor.RED + p.getName() + ChatColor.RESET);
